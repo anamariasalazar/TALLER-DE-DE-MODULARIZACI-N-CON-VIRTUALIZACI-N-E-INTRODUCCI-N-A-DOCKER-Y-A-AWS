@@ -1,0 +1,10 @@
+db.createUser(
+    {
+        user:"ana",
+        pwd:"ana123",
+        roles:[{
+            role:"readWrite",
+            db:"DockeryAWS"
+        }]
+    }
+)
