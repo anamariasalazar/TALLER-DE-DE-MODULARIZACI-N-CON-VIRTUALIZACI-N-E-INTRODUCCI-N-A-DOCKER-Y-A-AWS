@@ -189,22 +189,22 @@ docker images
 
 
 ### Creación puertos AWS
-
-Ahora que tenemos instalado nuestra maquina podemos desplegar nuestras imagenes docker en el, pero para eso necesitamos crear reglas de entrada para que la maquina pueda leer los puertos que necesitamos; por lo cual iremos a nuestra instancia desde la consola de amazón y nos dirigiremos a la pestaña de "seguridad" y oprimiremos en el link de "grupos de seguridad"
+En la consola de amazón y en la pestaña de "seguridad" y se da click en el link "grupos de seguridad"
 ![](/Imagenes/27.PNG)
 
-Ahora en reglas de entrada seleccionaremos "edit inbound rules"
+Se seleccionad "edit inbound rules"en las reglas de entrada 
 ![](/Imagenes/28.PNG)
 
-Lo cual nos mostrara esta pestaña en la cual crearemos nuestras reglas oprimiendo en "agregar regla"
+Se da click en "agregar regla"
 ![](/Imagenes/29.PNG)
 
-Crearemos una regla por cada puerto que necesitamos usar es decir 35000 para roundrobin, 35001 para logservice1, 35003 para logservice2, 35003 para logservice3, 27017 para mongo, lo cual nos quedara así
+Se crea una regla por cada puerto,35000 para roundrobin, 35001 para logservice1, 35003 para logservice2, 35003 para logservice3, 27017 para mongo.
 ![](/Imagenes/30.PNG)
+
 
 ### Despliegue en AWS
 
-Ya podemos desplegar en AWS teniendo la garantia que nuestras imagenes vvan a poder hablar y escuchar en sus respectivos puertos, por lo cual ejecutaremos las imagenes que se encuentran en nuestro repositorio para que las guarde y ejecute, esto lo haremos con los siguientes comandos
+Se despliega en AWS, se ejecutan las imágenes que se encuentran en el repositorio para que las guarde y ejecute, con los siguientes comandos:
 
 ```
 docker run -d -p 35000:6000 --name roundrobin anamariasalazar/tallerarepdockeryaws:roundrobin
@@ -222,28 +222,27 @@ docker run -d -p 27017:27017 --name mongodb anamariasalazar/tallerarepdockeryaws
 ```
 ![](/Imagenes/32.PNG)
 
-Tras ejecutar estos comandos se crean las imagenes que las podemos conultar con el comando
+Se consultan las imágenes con el siguiente comando
 
 ```
 docker images
 ```
 ![](/Imagenes/33.PNG)
 
-Y también se crean los contenedores con el comando
+Se crean los contenedores con el siguiente comando
 ```
 docker ps
 ```
 ![](/Imagenes/34.PNG)
 
 
-Ahora teniendo nuestra imagenes podemos verificar que ya se encuentra desplegado consultando en este caso el link http://ec2-52-23-175-25.compute-1.amazonaws.com:35000/
+Se verifica que se encuentra desplegado consultando el siguiente link http://ec2-52-23-175-25.compute-1.amazonaws.com:35000/
 ![](/Imagenes/35.PNG)
 
 ## Pruebas
-Ahora podemos hacer las pruebas ingresando dos mensajes
+Se hacen las siguientes pruebas ingresando dos mensajes
 
 ### Prueba 1
-Primer mensaje
 ![](/Imagenes/35.PNG)
 
 Resultado primer mensaje
