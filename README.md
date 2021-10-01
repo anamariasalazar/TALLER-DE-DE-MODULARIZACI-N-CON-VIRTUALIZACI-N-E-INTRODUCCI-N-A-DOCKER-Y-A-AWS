@@ -49,7 +49,7 @@ Para ejecutar el proyecto después de clonarlo se debe hacer uso de los siguient
    
   
     
- ### Despliege localhost
+ ### Despliegue localhost
  
  Desplegar las imágenes y contenedores,con el siguiente comando en la raíz del proyecto:
  ```
@@ -129,6 +129,11 @@ docker push anamariasalazar/tallerarepdockeryaws:logservice2
 docker push anamariasalazar/tallerarepdockeryaws:logservice3
 ```
 ![](/Imagenes/13.PNG)
+
+Se visualizan las imágenes que se subieron en el repositorio de Docker hub
+![](/Imagenes/14.PNG)
+
+### Creación máquina en AWS
 
 ## Construido con
 
