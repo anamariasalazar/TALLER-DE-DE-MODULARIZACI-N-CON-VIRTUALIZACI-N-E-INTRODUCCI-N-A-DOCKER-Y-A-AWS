@@ -105,7 +105,7 @@ docker tag mongo:latest anamariasalazar/tallerarepdockeryaws:mongodb
 ![](/Imagenes/10.PNG)
 
 
-Se verifica que se hayan creado las imagenes con el siguiente comando:
+Se verifica que se hayan creado las imágenes con el siguiente comando:
 
 ```
 docker images
@@ -133,73 +133,54 @@ docker push anamariasalazar/tallerarepdockeryaws:logservice3
 Se visualizan las imágenes que se subieron en el repositorio de Docker hub
 ![](/Imagenes/14.PNG)
 
+
 ### Creación máquina en AWS
-Antes de desplegar en AWS debemos tener un entorno en el cual desplegarlo, por los cual crearemos una maquina virtual EC2 con ambiente linux en la consola de AWS; para hacer esto debemos dirigirnos a nuestra consola de AWS e iniciarla, nos daremos cuenta que estara iniciada al estar la luz verde enecendida al lado de donde dice AWS
+
+Se crea una máquina virtual EC2 con ambiente linux en la consola de AWS; al estar la luz verde donde dice AWS quiere decir que se inicio.Se da click en la palabra AWS.
 ![](/Imagenes/15.PNG)
 
-Tras encenderse la luz damos click en AWS y nos dirigira a la siguiente pestaña en donde seleccionaremos "Lance una maquina virtuall con EC2"
+Se selecciona "Lance una maquina virtuall con EC2"
 ![](/Imagenes/16.PNG)
 
-Ahora nos encontraremos en otra ventana que nos solicitara escoger el sistema operativo con el que se va a trabajar, elegiremos "Amazon Linux 2 AMI (HVM), SSD Volume Type" de 64 bits(x86)
+Se elige "Amazon Linux 2 AMI (HVM), SSD Volume Type" de 64 bits(x86)
 ![](/Imagenes/17.PNG)
 
-Tras esto nos enviara a escoger las caracteristicas que queremos que tenga el sistema operativo, seleccionaremos la que tiene la etiqueta verde que dice "Apto para capa gratuita" y oprimimos la opción del boton azul "revisar y lanzar"
+Se escoge las caracteristicas para el sistema operativo, en este caso "Apto para capa gratuita" luego se da click en "revisar y lanzar"
 ![](/Imagenes/18.PNG)
 
-Después nos muestra las caracteristicas de la maquina y oprimimos en "lanzar"
+Muestra las caracteristicas de la máquina y se da click en "lanzar"
 ![](/Imagenes/19.PNG)
 
-Y nos desplegara este menú, seleccionamos "Crear nuevo par de claves" de tipo "RSA" y le damos unn nombre, en este caso es "roundrobin" y las descargamos, tras la descarga se habilitara la opción "Lanzar instancias", a la cual le daremos clic
+Se selecciona "Crear nuevo par de claves" de tipo "RSA" y se le asigno el nombre de "roundrobin", se descargan,se habilita la opción "Lanzar instancias" se da click en esta opción.
 ![](/Imagenes/20.PNG)
 
-Ahora seleccionamos nuestra instancia y en el menpu superior de "Acciones" elegimos la opción conectar
+Se selecciona la instancia que se creo anteriormente y en el menú superior se da click en "Acciones" y se elige la opción conectar
 ![](/Imagenes/21.PNG)
 
-Adentro elegimos la opción ssh y copiamos la ruta de conexión en mi caso es esta:
+Se elige la opción ssh y se copia la ruta de conexión, en este caso es:
 
 ```
 ssh -i "roundrobin.pem" ec2-user@ec2-52-23-175-25.compute-1.amazonaws.com
 ```
 ![](/Imagenes/24.PNG)
 
-Después en nuestro computador creamos una nueva carpeta y dentro de esa carpeta vamos a colocar el archivo de claves que descargamos de la consola de amazon y desplegamos una consola en esta ubicación
-![](/Imagenes/25.PNG)
+En mi computador se creo una carpeta y dentro de esa carpeta se coloca el archivo de claves que se descargo anteriormente de la consola de amazon y se abre una consola de comandos en esta ubicación
 
-Ahora pondremos el siguiente comando para actualizar el sistema a la versión mas reciente
-
-```
-sudo yum update -y
-```
-
-Después instalaremos docker en nuestro ambiente con el siguiente comando
-
-```
-sudo yum install docker
-```
-
-Y asignaremos al usuario docker permisos de administrador para que no tengamos que hacer uso del comando sudo cada vez que ejecutemos un comando docker
-
-```
-sudo usermod -a -G docker ec2-user
-```
-
-Después de esto saldremos y volveremos a entrar para que los cambios se refresquen
-
-```
-exit
-```
+Se usa el siguiente comando para ingresar:
 
 ```
 ssh -i "roundrobin.pem" ec2-user@ec2-52-23-175-25.compute-1.amazonaws.com
 ```
 
-Tras volver a ingresar inicializamos el servicio docker
+Se inicializa el servicio docker
 
 ```
 sudo service docker start
 ```
+![](/Imagenes/25.PNG)
 
-Y al consultar las imagenes nos daremos cuenta que no existe ninguna, por lo cual las debemos desplegar en nuestro ambiente de la maquina EC2
+
+Se despliegan las imagenes en el ambiente de la maquina EC2
 
 ```
 docker images
