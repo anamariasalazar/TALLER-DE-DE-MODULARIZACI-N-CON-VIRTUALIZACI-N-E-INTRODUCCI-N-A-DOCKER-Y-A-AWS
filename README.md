@@ -1,7 +1,6 @@
 # TALLER-DE-MODULARIZACIÓN-CON-VIRTUALIZACIÓN-E-INTRODUCCIÓN-A-DOCKER-Y-A-AWS
 
-
-Taller donde se realizan
+Taller donde se trabaja el despliegue de instancias de código Java, en este caso 5 imágenes que están en contenedores docker; Round Robin es un balanceador con el puerto 35000 este distribuye solicitud a tres instancias LogService1 con puerto 35001, LogService2 con puerto 35002 y LogService3 con puerto 35003, estos LogService se comunican con mongoDB por medio de una imagen que se instancio,estos contenedores se suben a un repositorio de Docker el cual se desplega en una máquina virtual creada en AWS.
 
 ### Requisitos previos
 
