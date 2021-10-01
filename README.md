@@ -27,17 +27,17 @@ Para ejecutar el proyecto después de clonarlo se debe hacer uso de los siguient
     cd TALLERR
     mvn clean install
     
-![](/imagenes/1.PNG)
+![](/Imagenes/1.PNG)
    
     mvn package
-![](/imagenes/2.PNG)
+![](/Imagenes/2.PNG)
     
     cd ..
     
     cd TALLERR2
     
     mvn clean install
-![](/imagenes/3.PNG)
+![](/Imagenes/3.PNG)
     
     mvn package
     
@@ -55,14 +55,14 @@ Para ejecutar el proyecto después de clonarlo se debe hacer uso de los siguient
  ```
  docker-compose up -d
  ```
-![](/imagenes/5.PNG)
+![](/Imagenes/5.PNG)
   
  Se revisa las imágenes  que crearon con el siguiente comando:
  
  ```
  docker images
  ```
-![](/imagenes/6.PNG)
+![](/Imagenes/6.PNG)
  
  
  
