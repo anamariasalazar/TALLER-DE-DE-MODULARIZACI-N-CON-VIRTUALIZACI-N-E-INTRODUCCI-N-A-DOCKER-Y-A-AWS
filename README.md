@@ -21,20 +21,23 @@ Taller donde se trabaja el despliegue de instancias de código Java, en este cas
 
 ## Ejecución
 
-Para ejecutar el proyecto después de clonarlo se debe hacer uso de los siguientes comandos en el orden que se encuentran:
+Para ejecutar el proyecto después de clonarlo se debe hacer uso de los siguientes comandos en el orden que se encuentran,(se pondrán algunas imágenes de ejemplo):
    
     
     cd TALLERR
-   
     mvn clean install
     
+![](/imagenes/1.PNG)
+   
     mvn package
+![](/imagenes/2.PNG)
     
     cd ..
     
     cd TALLERR2
     
     mvn clean install
+![](/imagenes/3.PNG)
     
     mvn package
     
@@ -44,9 +47,27 @@ Para ejecutar el proyecto después de clonarlo se debe hacer uso de los siguient
     
     mvn package
    
-   
-### Instalación
-   
+  
+    
+ ### Despliege localhost
+ 
+ Desplegar las imágenes y contenedores,con el siguiente comando en la raíz del proyecto:
+ ```
+ docker-compose up -d
+ ```
+![](/imagenes/5.PNG)
+  
+ Se revisa las imágenes  que crearon con el siguiente comando:
+ 
+ ```
+ docker images
+ ```
+![](/imagenes/6.PNG)
+ 
+ 
+ 
+ 
+    
 ## Construido con
 
 * [Java] : Tecnología que se usa para el desarrollo de aplicaciones que convierten a la Web en un elemento más interesante y útil.
