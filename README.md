@@ -7,6 +7,8 @@ Taller donde se trabaja el despliegue de instancias de código Java, en este cas
 * Tener maven instalado
 * Tener git instalado
 * Versión de Java 7 o Java 8
+* Tener Docker instalado
+* Tener un protocolo SSH instalado y habilitado
 
 
 ### Instalación
@@ -14,31 +16,37 @@ Taller donde se trabaja el despliegue de instancias de código Java, en este cas
 1. Para hacer uso de este proyecto debe clonarlo de este repositorio a su computadora desde cmd usando el siguiente comando:
    
    ```
-   git clone https://github.com/anamariasalazar/TALLER-CLIENTES-Y-SERVICIOS
+   git clone https://github.com/anamariasalazar/TALLER-DE-DE-MODULARIZACI-N-CON-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS.git
    ```
 
-2. Antes de ejecutarlo debe compilar el proyecto, para esto haga uso del siguiente comando:
+## Ejecución
 
-    ```
+Para ejecutar el proyecto después de clonarlo se debe hacer uso de los siguientes comandos en el orden que se encuentran:
+   
+    
+    cd TALLERR
+   
+    mvn clean install
+    
     mvn package
-    ```
-3.  * Si se encuentra desde linux en el archivo procfile y reemplace el contenido por el siguiente texto:
     
-    ```
-    web: java $JAVA_OPTS -cp 'target/classes:target/dependency/* edu.escuelaing.arep.app.App
+    cd ..
     
-    ```
-    * Si se encuentra desde windows en el archivo procfile y reemplace el contenido por el siguiente texto:
+    cd TALLERR2
     
-    ```
-    web: java -cp target/classes;target/dependency/* edu.escuelaing.arep.app.App
-    ```
-
-
-## Ejecutando las pruebas
-
-Co
-  
+    mvn clean install
+    
+    mvn package
+    
+    cd ..
+    
+    mvn clean install
+    
+    mvn package
+   
+   
+### Instalación
+   
 ## Construido con
 
 * [Java] : Tecnología que se usa para el desarrollo de aplicaciones que convierten a la Web en un elemento más interesante y útil.
