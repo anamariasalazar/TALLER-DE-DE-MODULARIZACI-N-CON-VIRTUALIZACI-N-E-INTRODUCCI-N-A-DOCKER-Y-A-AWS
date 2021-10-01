@@ -103,7 +103,33 @@ docker tag mongo:latest anamariasalazar/tallerarepdockeryaws:mongodb
 ```
 
 ![](/Imagenes/10.PNG)
- 
+
+
+Se verifica que se hayan creado las imagenes con el siguiente comando:
+
+```
+docker images
+```
+
+Se empujaran las imágenes al repositorio de Docker hub:
+
+```
+docker push anamariasalazar/tallerarepdockeryaws:mongodb
+docker push anamariasalazar/tallerarepdockeryaws:roundrobin
+```
+![](/Imagenes/11.PNG)
+
+```
+docker push anamariasalazar/tallerarepdockeryaws:logservice1
+docker push anamariasalazar/tallerarepdockeryaws:logservice2
+```
+![](/Imagenes/12.PNG)
+
+```
+docker push anamariasalazar/tallerarepdockeryaws:logservice3
+```
+![](/Imagenes/13.PNG)
+
 ## Construido con
 
 * [Java] : Tecnología que se usa para el desarrollo de aplicaciones que convierten a la Web en un elemento más interesante y útil.
