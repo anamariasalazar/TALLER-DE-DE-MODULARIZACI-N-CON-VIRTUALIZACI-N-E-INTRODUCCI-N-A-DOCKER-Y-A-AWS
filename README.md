@@ -57,7 +57,7 @@ Para ejecutar el proyecto después de clonarlo se debe hacer uso de los siguient
  ```
 ![](/Imagenes/5.PNG)
   
- Se revisa las imágenes  que crearon con el siguiente comando:
+ Se revisa las imágenes que se crearon con el siguiente comando:
  
  ```
  docker images
@@ -65,9 +65,16 @@ Para ejecutar el proyecto después de clonarlo se debe hacer uso de los siguient
 ![](/Imagenes/6.PNG)
  
  
+ Se revisa los contenedores que se crearon con el siguiente comando:
+ 
+ ```
+ docker ps
+ ```
+ ![](/Imagenes/7.PNG)
+ 
+ ### Despliege en Docker Hub
  
  
-    
 ## Construido con
 
 * [Java] : Tecnología que se usa para el desarrollo de aplicaciones que convierten a la Web en un elemento más interesante y útil.
