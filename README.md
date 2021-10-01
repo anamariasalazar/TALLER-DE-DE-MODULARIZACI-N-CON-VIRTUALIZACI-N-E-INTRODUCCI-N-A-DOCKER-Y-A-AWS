@@ -73,28 +73,34 @@ Para ejecutar el proyecto después de clonarlo se debe hacer uso de los siguient
  ![](/Imagenes/7.PNG)
  
  ### Despliegue en Docker Hub
+ 
 Se creo un repositorio en Docker hub para subir el proyecto:
-Nombre de usuario: anamariasalazar
-Nombre del repositorio: tallerarepdockeryaws
-Link: https://hub.docker.com/repository/docker/anamariasalazar/tallerarepdockeryaws
+
+-Nombre de usuario: anamariasalazar
+
+-Nombre del repositorio: tallerarepdockeryaws
+
+-Link: https://hub.docker.com/repository/docker/anamariasalazar/tallerarepdockeryaws
 
 ![](/Imagenes/8.PNG)
 
- Se crean nuevos tags para cada imagen de la siguiente manera  "Nombre usuario Docker"/"Nombre repositorio" y con tag el nombre de cada recurso:
+ Se crean nuevos tags para cada imagen de la siguiente manera  "Nombre usuario de Docker"/"Nombre repositorio" y con tag el nombre de cada recurso:
 
-'''
+```
+docker tag taller-de-de-modularizaci-n-con-virtualizaci-n-e-introducci-n-a-docker-y-a-aws_roundrobin:latest anamariasalazar/tallerarepdockeryaws:roundrobin
+
 docker tag taller-de-de-modularizaci-n-con-virtualizaci-n-e-introducci-n-a-docker-y-a-aws_logservice1:latest anamariasalazar/tallerarepdockeryaws:logservice1
 
 docker tag taller-de-de-modularizaci-n-con-virtualizaci-n-e-introducci-n-a-docker-y-a-aws_logservice2:latest anamariasalazar/tallerarepdockeryaws:logservice2
 
 docker tag taller-de-de-modularizaci-n-con-virtualizaci-n-e-introducci-n-a-docker-y-a-aws_logservice3:latest anamariasalazar/tallerarepdockeryaws:logservice3
-'''
+```
 
 ![](/Imagenes/9.PNG)
 
-'''
+```
 docker tag mongo:latest anamariasalazar/tallerarepdockeryaws:mongodb
-'''
+```
 
 ![](/Imagenes/10.PNG)
  
